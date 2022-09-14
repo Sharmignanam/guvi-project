@@ -1,0 +1,84 @@
+*   objects in JavaScript may be defined as an unordered collection of related data, 
+    of primitive or reference types, in the form of “key: value” pairs. 
+*   These keys can be variables or functions and are called properties and methods,
+    respectively, in the context of an object.
+
+Objects and properties
+
+	*	The properties of an object define the characteristics of the object. 
+		You access the properties of an object with a simple dot-notation:
+
+			objectName.propertyName
+
+	*	For example, let’s create an object named myCar and give it properties named make, model, and year 
+		as follows:
+
+			var myCar = new Object();
+			myCar.make = 'Ford';
+			myCar.model = 'Mustang';
+			myCar.year = 1969;
+
+	*	Unassigned properties of an object are undefined (and not null).
+
+			myCar.color; // undefined
+	
+	*	Properties of JavaScript objects can also be accessed or set using a bracket 
+		notation . Objects are sometimes called associative arrays, 
+		since each property is associated with a string value that can be used to access it. 
+		So, for example, you could access the properties of the myCar object as follows:
+
+			myCar['make'] = 'Ford';
+			myCar['model'] = 'Mustang';
+			myCar['year'] = 1969;
+
+Creating Objects In JavaScript :
+Create JavaScript Object with Object Literal
+
+	*	One of easiest way to create a javascript object is object literal, 
+		simply define the property and values inside curly braces as shown below
+
+			let bike = {name: 'SuperSport', maker:'Ducati', engine:'937cc'};
+
+Create JavaScript Object with Constructor
+	*	Constructor is nothing but a function and with help of new keyword, 
+		constructor function allows to create multiple objects of same flavor as shown below
+
+			function Vehicle(name, maker) {
+   				this.name = name;
+   				this.maker = maker;
+					}
+		let car1 = new Vehicle(’Fiesta’, 'Ford’);
+		let car2 = new Vehicle(’Santa Fe’, 'Hyundai’)
+		console.log(car1.name);    //Output: Fiesta
+		console.log(car2.name);    //Output: Santa Fe
+
+Using the JavaScript Keyword new
+	*	The following example also creates a new JavaScript object with four properties:
+
+Example
+
+		var person = new Object();
+		person.firstName = “John”;
+		person.lastName = “Doe”;
+		person.age = 50;
+		person.eyeColor = “blue”;
+
+Using the Object.create method
+	*	Objects can also be created using the Object.create() method. 
+		This method can be very useful, because it allows you to choose the 
+		prototype object for the object you want to create, without having to define a constructor function.
+
+// Animal properties and method encapsulation
+var Animal = {
+  type: 'Invertebrates', // Default value of properties
+  displayType: function() {  // Method which will display type of Animal
+    console.log(this.type);
+  }
+};
+// Create new animal type called animal1 
+var animal1 = Object.create(Animal);
+animal1.displayType(); // Output:Invertebrates
+// Create new animal type called Fishes
+var fish = Object.create(Animal);
+fish.type = 'Fishes';
+fish.displayType(); 
