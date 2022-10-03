@@ -5,13 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>myfirstpage</title>
- <style>
-    div{
-        background-color: green;
-    }
- </style> 
+    <style>
+        table,th,td{
+           border: 1px solid black;
+           border-collapse: collapse;
+        }
+        th{
+           font-family: 'Courier New', Courier, monospace;
+        }
+       </style>
+  
 </head>
 <body>
-<div>main</div>
+    <table>
+        <thead><th>State of health</th>
+    <th colspan="2">Fasting value</th>
+
+<th>After Remaining</th></thead>
+<tr><th></th>
+    <th>Minimum</th>
+    <th>Normal</th>
+    <th>2 Hours of eating</th>
+</tr>
+<tr>
+    <td>healthy</td>
+    <td>70</td>
+    <td>100</td>
+    <td>lessthan 140</td>
+</tr>
+<tr>
+    <td>Pre diabetes</td>
+    <td>101</td>
+    <td>126</td>
+    <td>140-200</td>
+</tr>
+<tr>
+    <td>Diabetes</td>
+    <td>morethan 126</td>
+    <td>not applicable</td>
+    <td>morethan 200</td>
+</tr>
+</table>
 </body>
 </html>
